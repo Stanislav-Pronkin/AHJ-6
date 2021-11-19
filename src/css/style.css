@@ -1,0 +1,54 @@
+#container {
+    display: inline-flex;
+    background-color: #107abb;
+}
+
+.tasks {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #dee2e5;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.item-tasks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item-task {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5px;
+  position: absolute;
+  text-align: center;
+}
+
+.item-task:hover > .delete{
+    display: block;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    background: #fff;
+}
